@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выбери свое авто</title>
+    <link rel="stylesheet" href="./assets/css/nullstyle.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Сделай свой выбор</header>
+      <main class="main">
+        <div class="main__wrapper">
+          <div class="form">
+            <form action="" class="form__wrapper">
+              <select name="model" class="models" onchange="changeModel()">
+                <option value="empty">Выберите модель</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="fordMustang">Ford Mustang</option>
+                <option value="porshe">Porshe</option>
+              </select>
+              <select
+                name="chevrolet"
+                class="chevrolet"
+                onchange="changeChevrolet()"
+              >
+                <option value="empty">Выберите модель</option>
+                <option value="camaro" class="camaro">Camaro</option>
+                <option value="corveteZ06" class="corveteZ06">
+                  Corvete Z06
+                </option>
+                <option value="corvetteStingray" class="corvetteStingray">
+                  Corvette Stingray
+                </option>
+              </select>
+              <select
+                name="fordMustang"
+                id=""
+                class="fordMustang"
+                onchange="changeMustang()"
+              >
+                <option value="empty">Выберите модель</option>
+                <option value="GT350">Shelby GT350</option>
+                <option value="GT500">Shelby GT500</option>
+              </select>
+              <select
+                name="porshe"
+                id=""
+                class="porshe"
+                onchange="changePorshe()"
+              >
+                <option value="empty">Выберите модель</option>
+                <option value="caimanGT4">CaimanGT4</option>
+                <option value="boxter">Boxter</option>
+                <option value="turboS">Turbo S</option>
+              </select>
+              <div class="fuel">
+                <div class="title">Топливо</div>
+                <label
+                  >Дизель
+                  <input type="radio" name="fuel" class="diselfuel" />
+                </label>
+                <label
+                  >Бензин
+                  <input type="radio" name="fuel" class="gasfuel" />
+                </label>
+                <label
+                  >Электричество
+                  <input type="radio" name="fuel" class="electrofuel" />
+                </label>
+              </div>
+              <div class="state">
+                <div class="title">Состояние</div>
+                <label
+                  >Новая
+                  <input type="radio" name="state" class="newState" />
+                </label>
+                <label
+                  >Подержанная
+                  <input
+                    type="radio"
+                    name="state"
+                    class="oldState"
+                    onchange="getQtyOwners()"
+                  />
+                </label>
+              </div>
+              <div class="owners">
+                <div class="title">Количество предыдущих владельцев</div>
+                <label
+                  >1-2
+                  <input type="radio" name="owners" class="ownersMaxTwo" />
+                </label>
+                <label
+                  >3
+                  <input type="radio" name="owners" class="ownersThree" />
+                </label>
+              </div>
+              <div class="payType">
+                <div class="title">Способ оплаты</div>
+                <label
+                  >Наличными
+                  <input type="radio" name="payType" class="payType__cash" />
+                </label>
+                <label
+                  >Оплата картой
+                  <input type="radio" name="payType" class="payType__card" />
+                </label>
+                <label
+                  >Оплата по счету
+                  <input type="radio" name="payType" class="payType__invoice" />
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="main__image">
+            <img src="" alt="" class="carImage" />
+          </div>
+        </div>
+
+        <div class="result">
+          <div class="result__title">Стоимость вашего авто</div>
+          <div class="total"></div>
+          <button onclick="calcSum()">Рассчитать</button>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

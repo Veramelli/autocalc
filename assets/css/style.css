@@ -1,0 +1,82 @@
+html,
+body {
+  height: 100vh;
+  line-height: 1;
+  background-color: rgb(160, 160, 160);
+}
+
+select {
+  background-color: rgb(160, 160, 160);
+}
+
+button {
+  margin-top: 15px;
+  padding: 0 40px;
+  font-size: 15px;
+  font-weight: bold;
+  min-height: 30px;
+  min-width: 100px;
+  border-radius: 5px;
+  color: rgb(79, 78, 78);
+}
+
+.wrapper {
+  padding: 30px 0 70px 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lora", serif;
+}
+
+.header {
+  margin: 0 auto 20px;
+  font-size: 25px;
+  color: rgb(79, 78, 78);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form__wrapper {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chevrolet,
+.fordMustang,
+.porshe,
+.dodge,
+.owners {
+  display: none;
+}
+.title {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: rgb(79, 78, 78);
+}
+
+.carImage,
+.total {
+  font-size: 20px;
+  margin-top: 15px;
+  width: 300px;
+}
+
+.result__title {
+  padding-left: 20px;
+}
+
+.total {
+  padding: 0 40px;
+  color: rgb(79, 78, 78);
+}
