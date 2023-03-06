@@ -1,6 +1,14 @@
 "use strict";
 
 let sum = 0;
+const camaroImg = "./assets/img/Chevrolet-Camaro.png";
+const corvetImg = "./assets/img/Chevrolet-Corvette-Z06.png";
+const stringrayImg = "./assets/img/stringrayCorvette.png";
+const gt350Img = "./assets/img/Shelby-GT350.png";
+const gt500Img = "./assets/img/Shelby-GT500.png";
+const caymanImg = "./assets/img/cayman.png";
+const boxterImg = "./assets/img/Boxter.png";
+const turboSImg = "./assets/img/turboS.png";
 
 function changeModel() {
   const model = document.querySelector(".models").value;
@@ -25,15 +33,15 @@ function changeChevrolet() {
   sum = 0;
 
   if (modelChevrolet === "camaro") {
-    carImage.src = "./assets/img/Chevrolet-Camaro.png";
+    carImage.src = camaroImg;
     sum += 1000000;
   }
   if (modelChevrolet === "corveteZ06") {
-    carImage.src = "./assets/img/Chevrolet-Corvette-Z06.png";
+    carImage.src = corvetImg;
     sum += 1200000;
   }
   if (modelChevrolet === "corvetteStingray") {
-    carImage.src = "./assets/img/stringrayCorvette.png";
+    carImage.src = stringrayImg;
     sum += 1700000;
   }
 }
@@ -46,11 +54,11 @@ function changeMustang() {
   sum = 0;
 
   if (modelMustang === "GT350") {
-    carImage.src = "./assets/img/Shelby-GT350.png";
+    carImage.src = gt350Img;
     sum += 5000000;
   }
   if (modelMustang === "GT500") {
-    carImage.src = "./assets/img/Shelby-GT500.png";
+    carImage.src = gt500Img;
     sum += 6000000;
   }
 }
@@ -63,15 +71,15 @@ function changePorshe() {
   sum = 0;
 
   if (modelPorshe === "caimanGT4") {
-    carImage.src = "./assets/img/cayman.png";
+    carImage.src = caymanImg;
     sum += 6500000;
   }
   if (modelPorshe === "boxter") {
-    carImage.src = "./assets/img/Boxter.png";
+    carImage.src = boxterImg;
     sum += 7500000;
   }
   if (modelPorshe === "turboS") {
-    carImage.src = "./assets/img/turboS.png";
+    carImage.src = turboSImg;
     sum += 8000000;
   }
 }
