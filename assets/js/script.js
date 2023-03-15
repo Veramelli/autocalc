@@ -9,9 +9,12 @@ const gt500Img = "./assets/img/Shelby-GT500.png";
 const caymanImg = "./assets/img/cayman.png";
 const boxterImg = "./assets/img/Boxter.png";
 const turboSImg = "./assets/img/turboS.png";
+const model = document.querySelector(".models");
+const modelChevrolet = document.querySelector(".chevrolet");
+const modelMustang = document.querySelector(".fordMustang");
+const modelPorshe = document.querySelector(".porshe");
 
 function changeModel() {
-  const model = document.querySelector(".models").value;
   const chevrolet = document.querySelector(".chevrolet");
   const fordMustang = document.querySelector(".fordMustang");
   const porshe = document.querySelector(".porshe");
@@ -20,67 +23,53 @@ function changeModel() {
   fordMustang.style.display = "none";
   porshe.style.display = "none";
 
-  if (model === "chevrolet") chevrolet.style.display = "block";
-  if (model === "fordMustang") fordMustang.style.display = "block";
-  if (model === "porshe") porshe.style.display = "block";
+  if (model.value === "chevrolet") chevrolet.style.display = "block";
+  if (model.value === "fordMustang") fordMustang.style.display = "block";
+  if (model.value === "porshe") porshe.style.display = "block";
 }
 
 function changeChevrolet() {
-  const modelChevrolet = document.querySelector(".chevrolet").value;
   const carImage = document.querySelector(".carImage");
 
   carImage.src = "";
-  sum = 0;
 
-  if (modelChevrolet === "camaro") {
+  if (modelChevrolet.value === "camaro") {
     carImage.src = camaroImg;
-    sum += 1000000;
   }
-  if (modelChevrolet === "corveteZ06") {
+  if (modelChevrolet.value === "corveteZ06") {
     carImage.src = corvetImg;
-    sum += 1200000;
   }
-  if (modelChevrolet === "corvetteStingray") {
+  if (modelChevrolet.value === "corvetteStingray") {
     carImage.src = stringrayImg;
-    sum += 1700000;
   }
 }
 
 function changeMustang() {
-  const modelMustang = document.querySelector(".fordMustang").value;
   const carImage = document.querySelector(".carImage");
 
   carImage.src = "";
-  sum = 0;
 
-  if (modelMustang === "GT350") {
+  if (modelMustang.value === "GT350") {
     carImage.src = gt350Img;
-    sum += 5000000;
   }
-  if (modelMustang === "GT500") {
+  if (modelMustang.value === "GT500") {
     carImage.src = gt500Img;
-    sum += 6000000;
   }
 }
 
 function changePorshe() {
-  const modelPorshe = document.querySelector(".porshe").value;
   const carImage = document.querySelector(".carImage");
 
   carImage.src = "";
-  sum = 0;
 
-  if (modelPorshe === "caimanGT4") {
+  if (modelPorshe.value === "caimanGT4") {
     carImage.src = caymanImg;
-    sum += 6500000;
   }
-  if (modelPorshe === "boxter") {
+  if (modelPorshe.value === "boxter") {
     carImage.src = boxterImg;
-    sum += 7500000;
   }
-  if (modelPorshe === "turboS") {
+  if (modelPorshe.value === "turboS") {
     carImage.src = turboSImg;
-    sum += 8000000;
   }
 }
 
@@ -92,8 +81,22 @@ function getQtyOwners() {
   }
 }
 
+const chevrolet = document.forms.calcForm.chevrolet;
+const fordMustang = document.forms.calcForm.fordMustang;
+const porshe = document.forms.calcForm.porshe;
+
 function calcSum() {
+  sum = 0;
   const diselFuel = document.querySelector(".diselfuel").checked;
+  if (chevrolet.value == "camaro") sum += 50000;
+  if (chevrolet.value == "corveteZ06") sum += 60000;
+  if (chevrolet.value == "corvetteStingray") sum += 65000;
+  if (fordMustang.value == "GT350") sum += 68000;
+  if (fordMustang.value == "GT500") sum += 70000;
+  if (porshe.value == "caimanGT4") sum += 75000;
+  if (porshe.value == "boxter") sum += 80000;
+  if (porshe.value == "turboS") sum += 90000;
+
   if (diselFuel) sum += 70000;
   const gasFuel = document.querySelector(".gasfuel").checked;
   if (gasFuel) sum += 100000;
